@@ -14,9 +14,12 @@ namespace Stock_Worth_Project
         private readonly string Company;
 
         //--Constructor
-        public WarrenFormula()
+        public WarrenFormula(double d_e_ratio, double bookvalue, double marketvalue, string company)
         {
-
+            D_E_Ratio = d_e_ratio;
+            BookValue = bookvalue;
+            MarketValue = marketvalue;
+            Company = company;
         }
         
     }
