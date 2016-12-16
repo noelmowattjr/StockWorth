@@ -8,10 +8,10 @@ namespace Stock_Worth_Project
 {
     class WarrenFormula
     {
-        private readonly double D_E_Ratio;
-        private readonly double BookValue;
-        private readonly double MarketValue;
-        private readonly string Company;
+        private double D_E_Ratio;
+        private double BookValue;
+        private double MarketValue;
+        private string Company;
 
         //--Constructor
         public WarrenFormula(double d_e_ratio, double bookvalue, double marketvalue, string company)
@@ -20,6 +20,19 @@ namespace Stock_Worth_Project
             BookValue = bookvalue;
             MarketValue = marketvalue;
             Company = company;
+        }
+
+        //-------------------Getters and Setters--------------------------//
+        public double DERatio_GS
+        {
+            get { return D_E_Ratio; }
+            set { D_E_Ratio = value; }
+        }
+
+        public double BookValue_GS
+        {
+            get { return BookValue; }
+            set { BookValue = value; }
         }
         
     }
