@@ -10,6 +10,9 @@ namespace Stock_Worth_Project
     {
         static void Main(string[] args)
         {
+            
         }
+
+        
     }
 }
