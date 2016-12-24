@@ -1,2 +1,2 @@
 # StockWorth
-A program for calculating a company's intrinsic value and comparing it the it's market value
+A program for discerning whether or not a company is worthy of investing in - inspired by Warren Buffet's 4 rules.
