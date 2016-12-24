@@ -16,9 +16,24 @@ namespace Stock_Worth_Project
 
             //--Rule 1 - Is the company managed by vigilant leaders?--//
             //--What is the D/E ratio and current ratio?
+            Console.Write("Enter the company's name: ");
+            string company = Console.ReadLine();
+
+            Console.Write("Enter the total liabilities for 10 years: ");
+            string liabilities = Console.ReadLine();
+
+            Console.Write("Enter the total equity for 10 years: ");
+            string equity = Console.ReadLine();
+
+            //--Calculate with custom method here
+
 
             //--Rule 2 - Does the company has long term prospects?
             //--Are earnings sustainable? Is the company likely to be around 30 years from now?
+            Console.Write("Enter the industry: ");
+            string industry = Console.ReadLine();
+
+            Console.Write("What is {0}'s commodity: ", company);
 
             //--Rule 3 - Is the stock stable and understandable?
             //--Is the debt to equity history stable and are you able to determine an intrinsic value accurately?
