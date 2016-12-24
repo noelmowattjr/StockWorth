@@ -8,21 +8,21 @@ namespace Stock_Worth_Project
 {
     interface IEvaluate
     {
-        double DEratio();
-        double CurrentRatio();
+        double DEratio(double li, double eq);
+        double CurrentRatio(double assets, double li);
         bool Undervalued();
     }
 
     class Formula : IEvaluate
     {
-        public double DEratio()
+        public double DEratio(double li, double eq)
         {
-            return 1.1;
+            return li / eq;
         }
 
-        public double CurrentRatio()
+        public double CurrentRatio(double assets, double li)
         {
-            return 1.0;
+            return assets / li;
         }
 
         public bool Undervalued()
