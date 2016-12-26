@@ -19,12 +19,12 @@ namespace Stock_Worth_Project
 
             while (run)
             {
-                //--Rule 1 - Is the company managed by vigilant leaders?--//
+   //--MARK I   Rule 1 - Is the company managed by vigilant leaders?--//
                 //--What is the D/E ratio and current ratio?
-                Console.Write("Enter the company's name: ");
+                Console.Write("Enter a company: ");
                 string company = Console.ReadLine();
 
-                Console.Write("Enter the total liabilities for 10 years: ");
+                Console.Write("Enter {0}'s total liabilities for 10 years: ", company);
                 string entryLi = Console.ReadLine();
 
                 //--Validate and convert to double for liabilities entry
@@ -34,7 +34,7 @@ namespace Stock_Worth_Project
                     entryLi = Console.ReadLine();
                 }
 
-                Console.Write("Enter the total equity for 10 years: ");
+                Console.Write("Enter {0}'s total equity for 10 years: ", company);
                 string entryEq = Console.ReadLine();
                 while (!(double.TryParse(entryEq, out equity)))
                 {
@@ -42,11 +42,15 @@ namespace Stock_Worth_Project
                     entryEq = Console.ReadLine();
                 }
 
-                //--Calculate with custom method here
+                //--Calculate with custom method here - give user feedback
                 var debtTOequityRatio = Math.Round(formula.DEratio(liabilities, equity), 2);
-                Console.WriteLine("The D/E Ration for {0} is {1}", company, debtTOequityRatio);
+                if (debtTOequityRatio <= 0.5)
+                {
+                    Console.WriteLine("Having a D/E ratio of {0} is good! This tells us that {1} manages debt well", debtTOequityRatio, company);
+                }
+                
 
-                //--Rule 2 - Does the company has long term prospects?
+   //--MARK II  Rule 2 - Does the company has long term prospects?
                 //--Are earnings sustainable? Is the company likely to be around 30 years from now?
                 Console.Write("Does the company has long term prospects? ");
                 string prospects = Console.ReadLine();
@@ -63,8 +67,7 @@ namespace Stock_Worth_Project
                     break;
                 }
 
-
-                //--Rule 3 - Is the stock stable and understandable?
+  //--MARK III  Rule 3 - Is the stock stable and understandable?
                 //--Is the debt to equity history stable and are you able to determine an intrinsic value accurately?
                 Console.Write("After viewing {0}'s debt to equity ratio for 10 years\r\nIs there stock stable & understandble?", company);
                 string stableUnderstand = Console.ReadLine();
@@ -74,13 +77,16 @@ namespace Stock_Worth_Project
                     break;
                 }
 
-                //--Rule 4 - Is the stock undervalued?
+  //--MARK IV   Rule 4 - Is the stock undervalued?
                 Console.Write("Is the stock undervaued? ");
                 string undervaluedOrNot = Console.ReadLine();
 
                 if (undervaluedOrNot.ToLower() == "no")
                 {
                     break;
+                } else if (undervaluedOrNot.ToLower() == "yes")
+                {
+
                 }
 
                 //-------------If all 4 rules are met, then stock is a buy------------//
