@@ -25,9 +25,9 @@ namespace Stock_Worth_Project
             return assets / li;
         }
 
-        public bool Undervalued()
+        public bool Undervalued(double intrinsicValue, double marketValue)
         {
-            return true;
+            return intrinsicValue > marketValue;
         }
     }
 }
