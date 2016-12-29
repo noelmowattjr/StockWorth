@@ -8,10 +8,10 @@ namespace Stock_Worth_Project
 {
     class WarrensFourRules
     {
-        private bool HasVigilantLeaders;
-        private bool HasLongTermProspects;
-        private bool StockIsStableAndUnderstandable;
-        private bool IsUnderValued;
+        private bool HasVigilantLeaders = true;
+        private bool HasLongTermProspects = true;
+        private bool StockIsStableAndUnderstandable = true;
+        private bool IsUnderValued = true;
 
         //--Constructor
         public WarrensFourRules(bool hasVigilantLeaders, bool hasLongTermProspects, bool stockStableUnderstandable, bool isUndervalued)
