@@ -47,6 +47,9 @@ namespace Stock_Worth_Project
                 if (debtTOequityRatio <= 0.5)
                 {
                     Console.WriteLine("Having a D/E ratio of {0} is good! This tells us that {1} manages debt well", debtTOequityRatio, company);
+                } else if (debtTOequityRatio > 0)
+                {
+                    Console.WriteLine("I don't know about this company's D/E ratio! because it is less than zero!");
                 }
                 
 
