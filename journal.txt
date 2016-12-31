@@ -1,2 +1,5 @@
 Saturday, Dec 24 2016 (Christmas Eve)
 Today I added an interface to my project with 3 methods to be implemented. Also, I began introducing my user prompts, but I don’t want this program to be a series of too many questions for the user to answer; instead I just want to ask the user 4 to 5 questions max and return results using some finance api for public companies.
+
+Friday, Dec 30 2016, 2258 hours
+Project UPDATE: I have implemented the use of an Interface in my project after taking a Lynda tutorial on how its used and the purpose Interfaces serve in C#. As of now, I feel pretty good as to where the program is heading. I have since created 2 methods, the first for finding a company’s D/E ratio and the second for finding a company’s current ratio. The D/e ratio and the current ratio results will tell us whether or not the company manages debt good.
