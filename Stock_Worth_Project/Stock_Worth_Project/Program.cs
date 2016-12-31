@@ -20,7 +20,7 @@ namespace Stock_Worth_Project
             while (run)
             {
    //--MARK I   Rule 1 - Is the company managed by vigilant leaders?--//
-                //--What is the D/E ratio
+                //--Finding the D/E ratio
                 Console.Write("Enter a company: ");
                 string company = Console.ReadLine();
 
@@ -52,16 +52,30 @@ namespace Stock_Worth_Project
                     Console.WriteLine("I don't know about this company's D/E ratio! because it is less than zero!");
                 }
 
-                //--Find Current Ratio
+                //--Find Current Ratio/////////////////////////////////////////////////////////////////
+                double currAssets; double currLia;
 
                 //--prompt for current assets
                 Console.Write("Enter the current assets for {0}", company);
                 string assetz = Console.ReadLine();
 
+                //--Validate and Convert
+                while (!(double.TryParse(assetz, out currAssets)))
+                {
+                    Console.Write("Invalid!\r\nEnter the current assets for {0}", company);
+                    assetz = Console.ReadLine();
+                }
+
                 //--prompt for current liabilities
                 Console.Write("Enter the current liabilities for {0}", company);
                 string liabilitiez = Console.ReadLine();
 
+                while (!(double.TryParse(liabilitiez, out currLia)))
+                {
+                    Console.Write("Invalid!\r\nEnter current liabilities for {0}", company);
+                    liabilitiez = Console.ReadLine();
+                }
+                ///////////////////////////////////////////////////////////////////////////////////////////
    //--MARK II  Rule 2 - Does the company has long term prospects?
                 //--Are earnings sustainable? Is the company likely to be around 30 years from now?
                 Console.Write("Does the company has long term prospects? ");
