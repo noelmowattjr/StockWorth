@@ -75,6 +75,11 @@ namespace Stock_Worth_Project
                     Console.Write("Invalid!\r\nEnter current liabilities for {0}", company);
                     liabilitiez = Console.ReadLine();
                 }
+
+                //--Results for Current Ratio
+                var currRatio = formula.CurrentRatio(assets: currAssets, li: currLia);
+                Console.WriteLine("The Current Ratio of {0} is {1}", company, currRatio);
+
                 ///////////////////////////////////////////////////////////////////////////////////////////
    //--MARK II  Rule 2 - Does the company has long term prospects?
                 //--Are earnings sustainable? Is the company likely to be around 30 years from now?
