@@ -77,8 +77,17 @@ namespace Stock_Worth_Project
                 }
 
                 //--Results for Current Ratio
-                var currRatio = formula.CurrentRatio(assets: currAssets, li: currLia);
+                var currRatio = Math.Round(formula.CurrentRatio(assets: currAssets, li: currLia), 2);   //--rounds it 2 decimal places
                 Console.WriteLine("The Current Ratio of {0} is {1}", company, currRatio);
+
+                //--Giving user feedback on whether or not the Current Ratio was favorable
+                if (currRatio >= 1.5)
+                {
+                    Console.WriteLine("{0} has a good Current Ratio!", company);
+                } else
+                {
+                    Console.WriteLine("{0} has a bad Current rario", company);
+                }
 
                 ///////////////////////////////////////////////////////////////////////////////////////////
    //--MARK II  Rule 2 - Does the company has long term prospects?
