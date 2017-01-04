@@ -50,6 +50,10 @@ namespace Stock_Worth_Project
 
 
             //--Average book value change Formula: FV = PV(1 + i)^n
+            /*  FV = Current Book Value
+                PV = Old Book Value
+                i = Solving for i
+                n = the number of years between book values (exponent)*/
             
         }
         public static double PercentIncreaseBy(double newNum, double oldNum)
