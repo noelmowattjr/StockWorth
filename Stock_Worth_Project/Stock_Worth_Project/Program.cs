@@ -41,26 +41,19 @@ namespace Stock_Worth_Project
                 Console.Write("Invalid!\r\nEnter num of years between book values");
                 years = Console.ReadLine();
             }
-
-            //--Find percentage increase
-            var percIncreased = PercentIncreaseBy(CurrBook, OldBook); Console.WriteLine("Percent increase {0}", percIncreased);
-            var tenYearIncrease = percIncreased * 10;
-
-            Console.WriteLine("Here's the 10 year percent increase "+tenYearIncrease);
-
-
+            
+        }
+        public static double AverageBookValueChange(double newNum, double oldNum, double numOfYears)
+        {
             //--Average book value change Formula: FV = PV(1 + i)^n
             /*  FV = Current Book Value
                 PV = Old Book Value
                 i = Solving for i
                 n = the number of years between book values (exponent)*/
+
+            var FV = newNum; var PV = oldNum; var n = numOfYears;
             
-        }
-        public static double PercentIncreaseBy(double newNum, double oldNum)
-        {
-            double theIncrease = newNum / oldNum;
-            double percentIncrease = (oldNum / theIncrease) / 100;
-            return percentIncrease;
+            return 1;
         }
     }
 }
