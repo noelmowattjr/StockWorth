@@ -41,9 +41,14 @@ namespace Stock_Worth_Project
                 Console.Write("Invalid!\r\nEnter num of years between book values");
                 years = Console.ReadLine();
             }
+
+            //--Example of using Math.Pow
+            var power = (double) Math.Pow(1, 10);
+            Console.WriteLine("This {0}", power);
+            
             
         }
-        public static double AverageBookValueChange(double newNum, double oldNum, double numOfYears)
+        public static double AverageBookValueChange(double newNum, double oldNum, double numOfYears, double interestRate)
         {
             //--Average book value change Formula: FV = PV(1 + i)^n
             /*  FV = Current Book Value
@@ -51,7 +56,11 @@ namespace Stock_Worth_Project
                 i = Solving for i
                 n = the number of years between book values (exponent)*/
 
-            var FV = newNum; var PV = oldNum; var n = numOfYears;
+            var FV = newNum;
+            var PV = oldNum;
+            var i = interestRate;
+            var n = Math.Exp(numOfYears);
+            
             
             return 1;
         }
